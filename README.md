@@ -1,7 +1,7 @@
 # Unlock Modifies ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/BThree496/Unlock-Modifies/Github%20CI?style=flat-square) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/1653126591?style=flat-square) ![Steam Favorites](https://img.shields.io/steam/favorites/1653126591?style=flat-square)
 A Duck Game Mod
 
-Download: [latest release](https://github.com/BThree496/UnlockModifies/releases)
+Download: [latest release](https://github.com/BThree496/Unlock-Modifies/releases)
 
 Building
 -------
@@ -22,7 +22,7 @@ Steam:
 
 Manual:
 - Download Pre-Compiled Version or build it youself:
-  - https://github.com/BThree496/UnlockModifies/releases
+  - https://github.com/BThree496/Unlock-Modifies/releases
 - Move the compiled mod folder to Documents\DuckGame\Mods\
 - Run game and enable Unlock Modifies in Manage Mods tab
 - Restart Game

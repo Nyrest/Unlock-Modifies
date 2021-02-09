@@ -1,4 +1,4 @@
-# Unlock Modifies ![Github CI Badge](https://github.com/BThree496/Unlock-Modifies/workflows/Github%20CI/badge.svg) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/1653126591?style=flat-square) ![Steam Favorites](https://img.shields.io/steam/favorites/1653126591?style=flat-square)
+# Unlock Modifies ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/BThree496/Unlock-Modifies/Github%20CI?style=flat-square) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/1653126591?style=flat-square) ![Steam Favorites](https://img.shields.io/steam/favorites/1653126591?style=flat-square)
 A Duck Game Mod
 
 Download: [latest release](https://github.com/BThree496/UnlockModifies/releases)

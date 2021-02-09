@@ -1,0 +1,51 @@
+name: Github CI
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: windows-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            # Setup Nuget
+            - name: Setup NuGet
+              uses: NuGet/setup-nuget@v1.0.5
+
+            # Setup MSBuild
+            - name: Setup MSBuild
+              uses: microsoft/setup-msbuild@v1.0.2
+
+            # Try to pull Nuget Packages Caches
+            - name: Try to pull Nuget Packages Caches
+              uses: actions/cache@v2
+              id: cache-nugetPkgs
+              with:
+                path: ~/.nuget/packages
+                key: nuget-${{ hashFiles('**/packages.lock.json') }}
+                restore-keys: nuget
+
+            # Restore Nuget Packages If not cached
+            - name: Restore Nuget Packages If not cached
+              if: steps.cache-nugetPkgs.outputs.cache-hit != 'true'
+              run: nuget restore "Unlock Modifies.sln"
+
+            # Build the Solution
+            - name: Build the Solution
+              run: msbuild "Unlock Modifies.sln" /m /p:Configuration=Release /p:OutputPath=..\buildOutput
+
+            # Pack built files into single zip
+            - name: Pack built files
+              run: Compress-Archive -Path ".\buildOutput\*" -CompressionLevel Optimal -DestinationPath ".\Unlock Modifies.zip"
+
+            # Upload to Github Releases
+            - name: Upload to Github Releases
+              uses: "marvinpinto/action-automatic-releases@latest"
+              with:
+                repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                automatic_release_tag: "latest-release"
+                prerelease: false
+                title: "Unlock Modifies"
+                files: "Unlock Modifies.zip"

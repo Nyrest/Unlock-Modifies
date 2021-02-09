@@ -1,5 +1,5 @@
 # Unlock Modifies ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/BThree496/Unlock-Modifies/Github%20CI?style=flat-square) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/1653126591?style=flat-square) ![Steam Favorites](https://img.shields.io/steam/favorites/1653126591?style=flat-square)
-A Duck Game Mod
+Lightweight DuckGame mod that unlocks all the modifiers.
 
 Download: [latest release](https://github.com/BThree496/Unlock-Modifies/releases)
 
